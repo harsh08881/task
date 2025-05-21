@@ -52,7 +52,7 @@ def insert_data(data):
         )
         cur = conn.cursor()
 
-        # Create table if it doesn't exist
+       
         cur.execute("""
             CREATE TABLE IF NOT EXISTS customer_orders (
                 id SERIAL PRIMARY KEY,
@@ -64,7 +64,7 @@ def insert_data(data):
             )
         """)
 
-        # Insert data
+      
         insert_query = """
             INSERT INTO customer_orders (customer_name, product_name, quantity, price_per_unit, order_date)
             VALUES (%s, %s, %s, %s, %s)

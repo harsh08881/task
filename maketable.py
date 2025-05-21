@@ -2,7 +2,7 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 
-# Load environment variables from .env file
+
 load_dotenv()
 
 # Read DB credentials from .env
@@ -14,7 +14,7 @@ DB_PASS = os.getenv('DB_PASS')
 
 def create_table():
     try:
-        # Connect to PostgreSQL
+        
         conn = psycopg2.connect(
             host=DB_HOST,
             port=DB_PORT,

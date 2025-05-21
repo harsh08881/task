@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 from datetime import datetime, timedelta
 import google.generativeai as genai
 
-# Load environment variables
+
 load_dotenv()
 
-# Load PostgreSQL credentials from .env
+
 DB_USER = os.getenv("DB_USER")
 DB_PASS = os.getenv("DB_PASS")
 DB_HOST = os.getenv("DB_HOST")
@@ -16,10 +16,10 @@ DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure Gemini
+
 genai.configure(api_key=GEMINI_API_KEY)
 
-# Connect to DB
+
 uri = f"postgres://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}?sslmode=require"
 
 try:
